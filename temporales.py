@@ -41,7 +41,7 @@ class temporizador:
     def tiempo(self):
         horas, minutos, segundos = str(datetime.now()-self.tiempo_inicial).split(':')
         tiempo = datetime.now() - self.tiempo_inicial
-        if int(horas) == self.horas and int(minutos) == self.minutos and int(float(segundos)) == self.segundos:
+        if int(horas) >= self.horas and int(minutos) >= self.minutos and int(float(segundos)) >= self.segundos:
             return tiempo, True
         else:
             return tiempo, False
