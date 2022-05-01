@@ -1,7 +1,7 @@
 from datetime import datetime
 import string
 
-class Cronometro:
+class cronometro:
     pausado = False
     detenido = False
 
@@ -32,7 +32,7 @@ class Cronometro:
 
         return tiempo
 
-class Temporizador:
+class temporizador:
     detenido = False
 
     def iniciar(self,horas=0,minutos=0,segundos=0):
