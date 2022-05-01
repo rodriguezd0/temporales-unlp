@@ -1,5 +1,6 @@
 from datetime import datetime
 from datetime import timedelta
+import math
 import string
 
 class cronometro:
@@ -41,7 +42,7 @@ class temporizador:
         tiempo = self.objetivo - datetime.now()
         horas, minutos, segundos = str(tiempo).split(':')
         try:
-            if int(horas) <= 0 and int(minutos) <= 0 and float(segundos) <= 0:
+            if int(horas) <= 0 and int(minutos) <= 0 and math.ceil(float(segundos)) <= 0:
                 return tiempo, True
             else:
                 return tiempo, False
